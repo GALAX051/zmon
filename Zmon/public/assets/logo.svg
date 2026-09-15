@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="ZMon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="ZMon">
   <defs>
-    <linearGradient id="zmonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7dffc0" />
-      <stop offset="45%" stop-color="#1de783" />
-      <stop offset="100%" stop-color="#0c8a4c" />
+    <linearGradient id="zGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff88" />
+      <stop offset="100%" stop-color="#00dd77" />
     </linearGradient>
   </defs>
+  <!-- Z shape with modern rounded style -->
   <path
-    fill="none"
-    stroke="url(#zmonGradient)"
-    stroke-width="26"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    d="M45,40 L175,40 L60,180 L175,180"
+    fill="url(#zGradient)"
+    d="M 30 30 Q 40 30 50 40 L 150 160 Q 160 170 150 180 L 50 180 Q 40 180 30 170 L 30 150 Q 30 140 40 140 L 140 140 L 30 50 Q 30 40 30 30 Z"
   />
+  <!-- Alternative geometric Z -->
+  <rect x="50" y="25" width="100" height="30" fill="url(#zGradient)" rx="8" />
+  <polygon points="60,65 150,65 60,155" fill="url(#zGradient)" opacity="0.8" />
+  <rect x="50" y="145" width="100" height="30" fill="url(#zGradient)" rx="8" />
 </svg>

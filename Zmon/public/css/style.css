@@ -1,15 +1,17 @@
 :root {
-  --bg: #0a0d0a;
-  --bg-elevated: #10140f;
-  --bg-card: #131813;
-  --border: #1f2a1f;
-  --green: #1de783;
-  --green-dim: #14a862;
-  --green-glow: rgba(29, 231, 131, 0.25);
+  --bg: #0f0620;
+  --bg-elevated: #15082e;
+  --bg-card: #1a0e35;
+  --border: #2d1b4e;
+  --green: #00ff88;
+  --green-dim: #00cc6a;
+  --green-glow: rgba(0, 255, 136, 0.2);
+  --purple: #7c3aed;
+  --purple-dim: #6d28d9;
   --red: #ef4444;
-  --text: #e9f5ee;
-  --text-dim: #8ba397;
-  --radius: 10px;
+  --text: #f0f0f0;
+  --text-dim: #a0a0a0;
+  --radius: 12px;
   font-size: 16px;
 }
 
@@ -17,9 +19,9 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top, #0d130e 0%, var(--bg) 60%);
+  background: linear-gradient(135deg, #0f0620 0%, #1a0e35 50%, #0f0620 100%);
   color: var(--text);
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
   min-height: 100vh;
 }
 
@@ -27,9 +29,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 28px;
-  background: var(--bg-elevated);
-  border-bottom: 1px solid var(--border);
+  padding: 16px 28px;
+  background: rgba(21, 8, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.1);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -63,13 +66,21 @@ body {
 }
 
 .summary-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(26, 14, 53, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
   border-radius: var(--radius);
   padding: 16px 18px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.summary-card:hover {
+  background: rgba(26, 14, 53, 0.8);
+  border-color: rgba(124, 58, 237, 0.4);
+  transform: translateY(-4px);
 }
 
 .summary-value { font-size: 2rem; font-weight: 700; color: var(--green); }
@@ -80,27 +91,43 @@ body {
 
 #search {
   flex: 1;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(26, 14, 53, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
   border-radius: var(--radius);
-  padding: 10px 14px;
+  padding: 12px 16px;
   color: var(--text);
   font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
-#search:focus { outline: none; border-color: var(--green-dim); }
+#search:focus {
+  outline: none;
+  border-color: var(--green);
+  background: rgba(26, 14, 53, 0.8);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
 
 #refresh-btn {
-  background: transparent;
-  border: 1px solid var(--green-dim);
-  color: var(--green);
+  background: linear-gradient(135deg, var(--green) 0%, #00dd77 100%);
+  border: none;
+  color: #000;
   border-radius: var(--radius);
-  padding: 10px 18px;
+  padding: 12px 24px;
   cursor: pointer;
-  font-weight: 600;
-  transition: background 0.15s ease, box-shadow 0.15s ease;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
 }
-#refresh-btn:hover { background: var(--green-glow); box-shadow: 0 0 12px var(--green-glow); }
-#refresh-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+#refresh-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+}
+#refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
 
 .error-banner {
   background: rgba(239, 68, 68, 0.1);
@@ -119,13 +146,20 @@ body {
 }
 
 .ap-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(26, 14, 53, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
   border-radius: var(--radius);
-  padding: 16px 18px;
-  transition: border-color 0.15s ease, transform 0.1s ease;
+  padding: 18px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.ap-card:hover { border-color: var(--green-dim); transform: translateY(-2px); }
+.ap-card:hover {
+  background: rgba(26, 14, 53, 0.8);
+  border-color: var(--green);
+  box-shadow: 0 12px 48px rgba(0, 255, 136, 0.15);
+  transform: translateY(-6px);
+}
 
 .ap-card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
 .ap-status-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--text-dim); flex-shrink: 0; }
