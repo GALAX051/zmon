@@ -1,19 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="ZMon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="ZMon">
   <defs>
     <linearGradient id="zGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00ff88" />
+      <stop offset="0%" stop-color="#7dffc0" />
+      <stop offset="50%" stop-color="#1de783" />
       <stop offset="100%" stop-color="#00cc6a" />
     </linearGradient>
   </defs>
-  <!-- Z shape with bold stripes -->
-  <!-- Top horizontal line -->
-  <rect x="35" y="35" width="170" height="28" rx="14" fill="url(#zGradient)" />
-
-  <!-- Diagonal stripe -->
-  <g transform="translate(120, 95)">
-    <rect x="-90" y="0" width="180" height="28" rx="14" fill="url(#zGradient)" transform="rotate(-35)" />
-  </g>
-
-  <!-- Bottom horizontal line -->
-  <rect x="35" y="177" width="170" height="28" rx="14" fill="url(#zGradient)" />
+  <path
+    d="M40,42 L172,42 L48,178 L180,178"
+    fill="none"
+    stroke="url(#zGradient)"
+    stroke-width="34"
+    stroke-linecap="round"
+    stroke-linejoin="miter"
+  />
 </svg>
