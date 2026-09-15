@@ -2,16 +2,16 @@
   <defs>
     <linearGradient id="zGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00ff88" />
-      <stop offset="100%" stop-color="#00dd77" />
+      <stop offset="100%" stop-color="#00cc6a" />
     </linearGradient>
   </defs>
-  <!-- Z shape with modern rounded style -->
+  <!-- Top line of Z -->
   <path
-    fill="url(#zGradient)"
-    d="M 30 30 Q 40 30 50 40 L 150 160 Q 160 170 150 180 L 50 180 Q 40 180 30 170 L 30 150 Q 30 140 40 140 L 140 140 L 30 50 Q 30 40 30 30 Z"
+    d="M 40 40 L 160 40 L 60 100 L 160 160 L 40 160"
+    stroke="url(#zGradient)"
+    stroke-width="32"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
   />
-  <!-- Alternative geometric Z -->
-  <rect x="50" y="25" width="100" height="30" fill="url(#zGradient)" rx="8" />
-  <polygon points="60,65 150,65 60,155" fill="url(#zGradient)" opacity="0.8" />
-  <rect x="50" y="145" width="100" height="30" fill="url(#zGradient)" rx="8" />
 </svg>
