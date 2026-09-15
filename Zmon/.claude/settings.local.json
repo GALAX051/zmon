@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(ssh zallpy@10.92.254.47 \"cat /etc/os-release; echo '---'; node -v; npm -v\" 2>&1)"
+    ]
+  }
+}

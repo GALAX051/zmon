@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="ZMon">
+  <defs>
+    <linearGradient id="zmonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dffc0" />
+      <stop offset="45%" stop-color="#1de783" />
+      <stop offset="100%" stop-color="#0c8a4c" />
+    </linearGradient>
+  </defs>
+  <path
+    fill="none"
+    stroke="url(#zmonGradient)"
+    stroke-width="26"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M45,40 L175,40 L60,180 L175,180"
+  />
+</svg>

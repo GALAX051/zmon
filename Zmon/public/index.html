@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZMon | Monitoramento de APs</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="ZMon" class="brand-logo" id="brand-logo" />
+      <span class="brand-name">ZMon</span>
+    </div>
+    <div class="topbar-status">
+      <span class="dot" id="conn-dot"></span>
+      <span id="conn-label">conectando...</span>
+      <span class="last-update" id="last-update"></span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="summary">
+      <div class="summary-card">
+        <span class="summary-value" id="summary-total">0</span>
+        <span class="summary-label">APs total</span>
+      </div>
+      <div class="summary-card online">
+        <span class="summary-value" id="summary-online">0</span>
+        <span class="summary-label">Online</span>
+      </div>
+      <div class="summary-card offline">
+        <span class="summary-value" id="summary-offline">0</span>
+        <span class="summary-label">Offline</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-value" id="summary-clients">0</span>
+        <span class="summary-label">Clientes conectados</span>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <input type="search" id="search" placeholder="Buscar AP por nome, IP ou MAC..." />
+      <button id="refresh-btn" title="Atualizar agora">Atualizar</button>
+    </section>
+
+    <section id="error-banner" class="error-banner" hidden></section>
+
+    <section class="ap-grid" id="ap-grid"></section>
+
+    <template id="ap-card-template">
+      <article class="ap-card">
+        <header class="ap-card-header">
+          <span class="ap-status-dot"></span>
+          <h3 class="ap-name"></h3>
+        </header>
+        <dl class="ap-info">
+          <div><dt>IP</dt><dd class="ap-ip"></dd></div>
+          <div><dt>MAC</dt><dd class="ap-mac"></dd></div>
+          <div><dt>Modelo</dt><dd class="ap-model"></dd></div>
+          <div><dt>Uptime</dt><dd class="ap-uptime"></dd></div>
+          <div><dt>Clientes</dt><dd class="ap-clients"></dd></div>
+          <div><dt>CPU</dt><dd class="ap-cpu"></dd></div>
+          <div><dt>Memória</dt><dd class="ap-mem"></dd></div>
+          <div><dt>Download</dt><dd class="ap-down"></dd></div>
+          <div><dt>Upload</dt><dd class="ap-up"></dd></div>
+        </dl>
+        <div class="ap-essids"></div>
+      </article>
+    </template>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
